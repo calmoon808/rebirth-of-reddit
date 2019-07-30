@@ -17,6 +17,16 @@ body {
       display: flex;
       margin: auto;
       margin-bottom: 100px; }
+    body #header #plus {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-image: url("/public/assets/plus_grey.png");
+      height: 25px;
+      width: 25px; }
+    body #header #plus:hover {
+      background-image: url("/public/assets/plus_orange.png");
+      cursor: pointer; }
   body #navbar {
     position: fixed;
     background-color: #202020;
@@ -31,7 +41,7 @@ body {
     justify-content: center;
     z-index: 2; }
     body #navbar li {
-      color: #696969;
+      color: #909090;
       display: inline-flex;
       margin-left: 0;
       margin-top: 5px;
@@ -54,9 +64,9 @@ body {
     flex-wrap: wrap;
     flex-grow: 1;
     text-align: left;
-    margin-left: 12%;
-    margin-right: 10%;
-    margin-top: 10%;
+    margin-left: 12.5%;
+    margin-right: 12%;
+    margin-top: 7%;
     width: 75%; }
     body #redditContainer .articles {
       width: 300px;
@@ -101,3 +111,26 @@ body {
     background-repeat: no-repeat;
     padding-top: 0;
     z-index: 2; }
+    body #footer ul {
+      position: relative;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      margin-top: 9px; }
+      body #footer ul li {
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat; }
+      body #footer ul li:hover {
+        cursor: pointer; }
+      body #footer ul #facebook {
+        background-image: url("/public/assets/facebook_grey.png");
+        margin-right: 15px; }
+      body #footer ul #facebook:hover {
+        background-image: url("/public/assets/facebook_orange.png"); }
+      body #footer ul #instagram {
+        background-image: url("/public/assets/instagram_grey.png"); }
+      body #footer ul #instagram:hover {
+        background-image: url("/public/assets/instagram_orange.png"); }

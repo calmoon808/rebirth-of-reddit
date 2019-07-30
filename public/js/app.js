@@ -2,6 +2,8 @@ const header = makeElem('header', '#header');
 const logo = makeElem('img', '#imgHeader');
 logo.src = './assets/logo.svg'
 header.appendChild(logo);
+const plusButton = makeElem('img', '#plus');
+header.appendChild(plusButton);
 document.body.appendChild(header);
 const navBar = makeElem('ul', '#navbar');
 const randomArr = ['/r/Gifs', '/r/Futurology', '/r/Instant_regret', '/r/IAmA', '/r/askscience', '/r/DataIsBeautiful', '/user/kjoneslol/m/sfwpornnetwork'];
@@ -34,6 +36,23 @@ document.body.appendChild(navBar);
 const container = makeElem('div', '#redditContainer');
 document.body.appendChild(container);
 const footer = makeElem('footer', '#footer');
+const socialButtons = makeElem('ul', '#socialButtons');
+for(let i = 0; i < 2; i++){
+    let li;
+    if(i === 0){
+        li = makeElem('li', '#facebook');
+        li.addEventListener('click', function(){
+            document.location.href = 'https://www.facebook.com'
+        })
+    } else { 
+        li = makeElem('li', '#instagram');
+        li.addEventListener('click', function(){
+            document.location.href = 'https://www.instagram.com'
+        })
+    }
+    socialButtons.appendChild(li);
+}
+footer.appendChild(socialButtons);
 document.body.appendChild(footer);
 
 const firstLoad  = new XMLHttpRequest();

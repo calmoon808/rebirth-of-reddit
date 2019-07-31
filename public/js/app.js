@@ -29,7 +29,7 @@ for (let i = 0; i < 4; i++){
         })
     }
     li.addEventListener('mouseover', function(){this.style.color = 'orange'});
-    li.addEventListener('mouseout', function(){this.style.color = '#696969'});
+    li.addEventListener('mouseout', function(){this.style.color = '#909090'});
     navBar.appendChild(li);
 }
 document.body.appendChild(navBar);
@@ -73,7 +73,7 @@ function scrollEndCheck(){
 function getSend(){
     container.innerHTML = '';
     const redditData  = new XMLHttpRequest();
-    redditData.open('GET', 'https://www.reddit.com' + this.innerHTML + '/.json?limit=5');
+    redditData.open('GET', 'https://www.reddit.com' + this.innerHTML + '/.json');
     redditData.send();
     redditData.addEventListener('load', loadData);
 }
@@ -85,7 +85,8 @@ function loadData(){
         const pageContainer = makeElem('div', '.articles');
         const image = makeElem('img', '.image');
         if (!jsonResponse.data.children[i].data.preview){
-            image.src = 'http://placekitten.com/400/200';
+            image.src = 'http://placekitten.com/450/350';
+            pageContainer.appendChild(image);
         } else if (jsonResponse.data.children[i].data.preview.images[0].variants.gif){
             let decodedImg = jsonResponse.data.children[i].data.preview.images[0].variants.gif.source.url.replace(/&amp;/g, '&');
             image.src = decodedImg;
@@ -131,4 +132,4 @@ function throttle(fn, wait) {
         time = Date.now();
       }
     }
-  }
+}

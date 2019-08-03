@@ -1,0 +1,33 @@
+{
+  "name": "rebirth-of-reddit",
+  "version": "0.0.1",
+  "description": "Rebirthing Reddit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calmoon808/rebirth-of-reddit.git"
+  },
+  "keywords": [
+    "JS",
+    "reddit"
+  ],
+  "author": "Calvin Moon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calmoon808/rebirth-of-reddit/issues"
+  },
+  "homepage": "https://github.com/calmoon808/rebirth-of-reddit#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "i": "^0.3.6",
+    "install": "^0.13.0",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {}
+}
